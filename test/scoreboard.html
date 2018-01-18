@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id = "testCanvas"  width = "300px" height = "100px" style="background-color: black"></canvas>
+</body>
+
+
+<script>
+
+var canvas = document.getElementById("testCanvas")
+    var ctx = canvas.getContext("2d")
+
+    let x = 7
+    let q = 0
+
+draw =()=>{
+
+
+    ctx.clearRect(0,0,canvas.width*2,canvas.height*2)
+
+
+        if( q = 1,2,3,4)
+        {
+            console.log (q)
+        }
+
+
+    ctx.fillStyle = "lightgreen"
+    ctx.beginPath();
+    ctx.rect(20,20,x,x)
+    ctx.rect(20,30,x,x)
+    ctx.rect(20,40,x,x)
+    ctx.rect(20,50,x,x)
+    ctx.rect(20,60,x,x)
+    ctx.rect(20,70,x,x)
+    ctx.rect(20,80,x,x)
+
+    ctx.rect(30,20,x,x)
+    ctx.rect(40,20,x,x)
+    ctx.rect(50,20,x,x)
+
+    ctx.rect(50,30,x,x)
+    ctx.rect(50,40,x,x)
+    ctx.rect(50,50,x,x)
+    ctx.rect(50,60,x,x)
+    ctx.rect(50,70,x,x)
+    ctx.rect(50,80,x,x)
+
+    ctx.rect(30,80,x,x)
+    ctx.rect(40,80,x,x)
+
+    ctx.rect(30,50,x,x)
+    ctx.rect(40,50,x,x)
+
+    // ctx.rect(70,20,x,x)
+    // ctx.rect(70,30,x,x)
+    // ctx.rect(70,40,x,x)
+    // ctx.rect(70,50,x,x)
+    // ctx.rect(70,60,x,x)
+    // ctx.rect(70,70,x,x)
+    // ctx.rect(70,80,x,x)
+
+    // ctx.rect(80,20,x,x)
+    // ctx.rect(90,20,x,x)
+    // ctx.rect(100,20,x,x)
+
+    // ctx.rect(100,30,x,x)
+    // ctx.rect(100,40,x,x)
+    // ctx.rect(100,50,x,x)
+    // ctx.rect(100,60,x,x)
+    // ctx.rect(100,70,x,x)
+    // ctx.rect(100,80,x,x)
+
+    // ctx.rect(80,80,x,x)
+    // ctx.rect(90,80,x,x)
+
+    // ctx.rect(80,50,x,x)
+    // ctx.rect(90,50,x,x)
+    
+    ctx.fill()
+    ctx.closePath()
+    q++
+    if (q==10) q=-10
+
+}
+
+setInterval(draw,1000)
+
+</script>
+</html>

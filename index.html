@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hockey Game</title>
+
+    
+    
+    <style>
+
+canvas {
+          border: 2px solid red;
+          background-color:lightskyblue; /* Color of Hockey rinc */
+         
+        }
+ul {
+  list-style: none;
+  display: inline-block;
+}
+ul li {
+  float: left;
+  margin: 0 20px;
+}
+ul li a {
+  color: #000000;
+}
+   /* Creating the buttons */
+
+.button1 {   /* WELCOME BUTTON */
+    margin: 10px;  /* margin determines the position/sizes of buttons on screen */
+    margin-top: 69px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: none;
+}
+
+.button2 {  /* PLAY BUTTON */
+    margin: 10px;
+    margin-top: 69px;
+    background-color: #FF00FF;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    float: none;
+
+    
+}
+
+.button3 {   /* FINISH BUTTON */
+    margin: 10px;
+    margin-top: 69px;
+    background-color: #0000ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: none;
+    
+}
+    </style>
+
+
+
+</head>
+<body >
+    
+      
+                
+        <!--Suitable Images/Logos for menu -->
+       <span id = images>
+        <img src="Images/USA.jpg" width='220' height='85' alt="NFLLogos">
+        <img src="Images/MightDucks.jpg" width='220' height='85' alt="NFLLogos">
+        <img src="Images/panthers.jpg" width='220' height='85' alt="NFLLogos">
+        <img src="Images/Hockey.jpg" width='220' height='85' alt="NFLLogos">
+        <img src="Images/penguins.jpg" width='220' height='85' alt="NFLLogos">
+
+    </span>
+
+        
+       <center> <canvas id =gameCanvas width=1024px height=770px style="display:none"></canvas></center>
+        
+
+     <!-- Placing the buttons in the center of the screen -->   
+    <center>
+<button class="button1" id=btn1>
+        WELCOME
+    </button><br>
+    <p id=WELCOME></p>
+ <button class="button2" id=btn2 onclick="playFunction()"> 
+            PLAY
+ </button><br>
+ <p id=PLAY></p>
+
+
+
+</center>
+        
+
+       <div id = scoreBoard ><center></center></div>
+
+        <canvas id = gameCanvas style="display:none" width="1024px" height="770px"></canvas><br>
+        
+        <div id = ballSpeed style = "text-align:center; display: none"></div>
+        <div id = ballPosition  style = "text-align:center; display: none"></div>
+</body>
+
+<script src="scripts/buildField.js"></script>
+<script src="scripts/players.js"></script>
+<script src="scripts/ball.js"></script>
+<script src="scripts/renderer.js"></script>
+
+<script>
+
+    let j = null
+
+
+function playFunction() {
+    document.getElementById("images").style="display:none"
+    document.getElementById("gameCanvas").style="display:inline"
+    document.getElementById("btn1").style="display:none"
+    document.getElementById("btn2").style="display:none"
+    document.getElementById("scoreBoard").style="display:inline"
+    j=setInterval(renderGame,10)
+} 
+
+
+
+// adds button that calls reset, putting the ball in the centre of the field
+
+
+
+</script>
+</html>
